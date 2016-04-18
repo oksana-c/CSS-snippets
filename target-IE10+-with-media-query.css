@@ -1,0 +1,15 @@
+/* SOURCE: https://philipnewcomer.net/2014/04/target-internet-explorer-10-11-css/
+
+Create a media query using -ms-high-contrast, in which you place your IE 10 and 11-specific CSS styles. Because -ms-high-contrast is Microsoft-specific (and only available in IE 10+), it will only be parsed in Internet Explorer 10 and greater.
+
+-ms-high-contrast supports two values: none and active. So to target IE10+ regardless of the property’s setting, use this media query:*/
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  /* IE10+ CSS styles go here */
+}
+
+/* I’m using both of the valid values of the media query, so it will be parsed whether the user has high contrast enabled or not.
+
+Note that this technique will detect both IE10 and IE11. I have found that for my purposes, IE10 behaves exactly like IE11, so I have not needed to target IE10 or IE11 individually.
+
+Also keep in mind that this media query was added in Internet Explorer version 10, so this will only affect IE version 10 and up. If you still need to support IE9 and lower, you can use IE conditional comments.*/
