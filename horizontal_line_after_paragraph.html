@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Horizontal Line After Paragraph</title>
+  <style>
+    /* Horizontal line that fills empty space after paragraph */
+
+    p {
+      color: #98AB2B;
+      font-size: 2em;
+      overflow: hidden;
+      position: relative;
+      text-align: left;
+    }
+    p:after {
+      background-color: #98AB2B;
+      bottom: 3px;
+      content: '';
+      height: 2px;
+      margin-left: 10px;
+      overflow: hidden;
+      position: absolute;
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <p>Paragraph</p>
+</body>
+</html>
